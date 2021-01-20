@@ -1,0 +1,57 @@
+ul{
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-around;
+  li{
+    list-style: none;
+    flex: 1;
+  }
+}
+a:hover{
+  color: red;
+}
+.center{
+  .menu{
+    display: none;
+  }
+}
+//设置动态响应
+@media only screen {
+  @media (max-width:798px){
+    .nav-bar{   
+      justify-content: space-around;
+      .center{
+        order: 1;
+        flex: 1;
+        .menu{
+          display: block;
+          line-height: 49px;
+        }
+        ul{
+          visibility: hidden;
+          li{
+            flex: 1;
+          }
+        }
+      }
+      .center:hover ul{
+        visibility: visible;
+        display: flex;
+        flex-flow: column;
+        background-color: rgba(224, 224, 224,.6);
+        z-index: 9999;
+      }
+      .left{
+        flex: 1;
+        order: 2;
+        display: block;
+        margin: 0 auto;
+      }
+      .right{
+        flex: 1;
+        order: 3;
+      }
+    }
+  }
+}
