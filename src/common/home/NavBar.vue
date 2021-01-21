@@ -27,14 +27,17 @@ export default {
 
 <style scoped>
   .nav-wrapper{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
     width: 100%;
     box-shadow: 0 1px 1px rgba(100,100,100,.1);
-    background-color:  rgba(224, 224, 224, .6);
+    background-color: var(--color-tint);
   }
   #nav-bar{
     margin: 0 auto;
     display: flex;
-    max-width: 1200px;
+    max-width: var(--blog-width);
     height: 49px;
     line-height: 49px;
     text-align: center;

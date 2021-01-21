@@ -7,10 +7,18 @@ ul{
     list-style: none;
     flex: 1;
   }
+  a{
+    padding: 0 10px;
+    margin-bottom: -5px;
+    border-bottom:0px ;
+    transition: all 0.5s;
+  }
+  a:hover{
+    color: #6bc30d;
+    border-bottom: 1px solid #6bc30d;
+  }
 }
-a:hover{
-  color: red;
-}
+
 .center{
   .menu{
     display: none;
@@ -22,6 +30,9 @@ a:hover{
     .nav-bar{   
       justify-content: space-around;
       .center{
+        z-index: 9999;
+        text-align: left;
+        padding-left: 20px;
         order: 1;
         flex: 1;
         .menu{
@@ -30,6 +41,7 @@ a:hover{
         }
         ul{
           visibility: hidden;
+          height: 0;
           li{
             flex: 1;
           }
@@ -37,10 +49,13 @@ a:hover{
       }
       .center:hover ul{
         visibility: visible;
+        transition: height 1s;
         display: flex;
         flex-flow: column;
-        background-color: rgba(224, 224, 224,.6);
+        background-color: rgba(224, 224, 224,.1);
         z-index: 9999;
+        height: 300px;
+        text-align: left;
       }
       .left{
         flex: 1;
@@ -51,6 +66,8 @@ a:hover{
       .right{
         flex: 1;
         order: 3;
+        padding-right: 20px;
+        text-align: right;
       }
     }
   }

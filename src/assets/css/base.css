@@ -4,10 +4,11 @@
 :root {
   --color-text: #666;
   --color-high-text: #ff5777;
-  --color-tint: #ff8198;
+  --color-tint: rgba(255,255,255,1);
   --color-background: #fff;
   --font-size: 14px;
   --line-height: 1.5;
+  --blog-width: 1200px;
 }
 
 *,
@@ -33,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-
+.clear-fix::before,
 .clear-fix::after {
   clear: both;
   content: '';
