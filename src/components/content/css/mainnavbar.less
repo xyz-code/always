@@ -1,28 +1,28 @@
-ul{
-  padding: 0px;
-  margin: 0px;
-  display: flex;
-  justify-content: space-around;
-  li{
-    list-style: none;
-    flex: 1;
-  }
-  a{
-    padding: 0 10px;
-    margin-bottom: -5px;
-    border-bottom:0px ;
-    transition: all 0.5s;
-  }
-  a:hover{
-    color: #6bc30d;
-    border-bottom: 1px solid #6bc30d;
-  }
-}
 
 .center{
   .menu{
     display: none;
   }
+  ul{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around;
+    li{
+      list-style: none;
+      flex: 1;
+    }
+    a{
+      padding: 0 10px;
+      margin-bottom: -5px;
+      border-bottom:0px ;
+      transition: all 0.5s;
+    }
+    a:hover{
+      color: #6bc30d;
+      border-bottom: 1px solid #6bc30d;
+    }
+  }  
 }
 //设置动态响应
 @media only screen {
@@ -40,7 +40,7 @@ ul{
           line-height: 49px;
         }
         ul{
-          visibility: hidden;
+          display: none;
           height: 0;
           li{
             flex: 1;

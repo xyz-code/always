@@ -1,14 +1,14 @@
 <template>
-  <div class="content-top">
-    <time-line></time-line>
+  <div>
+    <article-details></article-details>
   </div>
 </template>
 
 <script>
-import TimeLine from 'components/content/Timeline'
+  import ArticleDetails from 'components/common/ArticleDetails'
 export default {
   components: {
-    TimeLine,
+    ArticleDetails
   },
   props: {},
   data() {

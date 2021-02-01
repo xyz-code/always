@@ -1,12 +1,15 @@
 <template>
-  <div>
-    <li>个人</li>
+  <div class="content-top">
+    <about-me></about-me>
   </div>
 </template>
 
 <script>
+import AboutMe from 'components/content/AboutMe'
 export default {
-  components: {},
+  components: {
+    AboutMe
+  },
   props: {},
   data() {
     return {};

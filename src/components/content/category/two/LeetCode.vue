@@ -1,14 +1,14 @@
 <template>
-  <div class="content-top">
-    <time-line></time-line>
+  <div class="common-content">
+    <my-echart></my-echart>
   </div>
 </template>
 
 <script>
-import TimeLine from 'components/content/Timeline'
+import MyEchart from 'common/echarts/myEchart'
 export default {
   components: {
-    TimeLine,
+    MyEchart
   },
   props: {},
   data() {

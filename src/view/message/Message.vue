@@ -1,12 +1,15 @@
 <template>
   <div>
-    <li>留言</li>
+    <message-wall></message-wall>
   </div>
 </template>
 
 <script>
+import MessageWall from 'components/content/MessageWall'
 export default {
-  components: {},
+  components: {
+    MessageWall,
+  },
   props: {},
   data() {
     return {};

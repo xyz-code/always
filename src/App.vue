@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="clearfix">
     <main-nav-bar></main-nav-bar>
     <router-view/>
     <Footer/>
@@ -30,9 +30,12 @@ export default {
   background-image: url('~assets/img/bg/bg3.jpg');
   background-repeat:no-repeat;
   background-size:100%;
-  
+
+  /**处理高度塌陷 开启bfc */
+  overflow: hidden;
+
   background-attachment:fixed;
   color: #2c3e50;
-  background-color: rgba(224, 224, 224, 0.6);
+  background-color: rgba(255, 253, 253, 0.918);
 }
 </style>

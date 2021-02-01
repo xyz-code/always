@@ -1,30 +1,15 @@
 <template>
-  <div>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
-    <li>zhoapian</li>
+  <div class="content-top">
+    <photo-wall></photo-wall>
   </div>
 </template>
 
 <script>
+import PhotoWall from 'components/content/PhotoWall'
 export default {
-  components: {},
+  components: {
+    PhotoWall,
+  },
   props: {},
   data() {
     return {};

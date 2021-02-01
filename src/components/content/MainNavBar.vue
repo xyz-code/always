@@ -21,7 +21,7 @@
           </a>
         </ul>
       </div>
-      <div slot="right">
+      <div slot="right" @click="toLogin()">
         <a href="javascript:;">
           <i class="fa fa-user" aria-hidden="true"></i>
         </a>
@@ -63,6 +63,9 @@ export default {
     aclick(path,index){
       this.$router.replace(path);
       this.curIndex = index;
+    },
+    toLogin(){
+      this.$router.push('/login')
     }
   },
   beforeCreate() {},

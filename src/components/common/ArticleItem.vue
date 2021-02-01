@@ -2,18 +2,18 @@
   <div>
     <article id="article-item">
       <div class="img-area">
-        <a href="">
+        <a>
           <img src="~assets/img/carousel/carousel1.jpg" alt="">
         </a>
       </div>
       <div class="article-area">
-        <a href="">
-          <h2 class="title">你好,错的不是你而是整个世界</h2>
+        <a>
+          <h2 class="title">{{article.title}}</h2>
         </a>
         <div class="icon-area">
-          <i class="fa fa-clock-o" aria-hidden="true">2021/11</i>
-          <i class="fa fa-eye" aria-hidden="true">5256</i>
-          <i class="fa fa-commenting-o" aria-hidden="true">23</i>
+          <i class="fa fa-clock-o" aria-hidden="true">{{article.modify_time}}</i>
+          <i class="fa fa-eye" aria-hidden="true">{{article.views_num}}</i>
+          <i class="fa fa-commenting-o" aria-hidden="true">{{article.reply_num}}</i>
         </div>
       </div>
     </article>
@@ -23,9 +23,18 @@
 <script>
 export default {
   components: {},
-  props: {},
+  props: {
+    article:{
+      type:Object,
+      default(){
+        return {}
+      }
+    }
+  },
   data() {
-    return {};
+    return {
+      
+    };
   },
   watch: {},
   computed: {},
@@ -54,6 +63,9 @@ export default {
   .img-area img{
     width: 100%;
     border-radius: 20px;
+  }
+  .img-area, .article-area title{
+    cursor: pointer;
   }
   .article-area{
     flex: 2;

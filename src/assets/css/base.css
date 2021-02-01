@@ -9,6 +9,7 @@
   --font-size: 14px;
   --line-height: 1.5;
   --blog-width: 1200px;
+  --blog-content-width:1000px;
 }
 
 *,
@@ -55,4 +56,12 @@ a {
 .right {
   float: right;
 }
-
+.content-top{
+  margin-top: 49px;
+}
+.common-content{
+  max-width: 1000px;
+  margin: 100px auto;
+  background-color: #fff;
+  overflow: hidden;
+}
