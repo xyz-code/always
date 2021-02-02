@@ -37,7 +37,7 @@ export default {
       //     created_time:'2021/1/25',
       //     modify_time:'2021/1/26',
       //   }
-      article:null,
+      article:{},
     };
   },
   watch: {},
@@ -50,8 +50,7 @@ export default {
   },
   created() {
     this.articleId = this.$route.params.id ;
-    console.log(this.articleId);
-    fetchArticle(5).then(res => {
+    fetchArticle(this.articleId).then(res => {
       this.article = res.data;
     })
   },

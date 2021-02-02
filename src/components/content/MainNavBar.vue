@@ -34,6 +34,7 @@
 <script>
 import NavBar from 'common/home/NavBar'
 export default {
+  name:'MainNavBar',
   components: {
     NavBar
   },
@@ -52,11 +53,13 @@ export default {
         {url:'/time',text:'时间轴'},
         {url:'/message',text:'留言板'},
         {url:'/profile',text:'关于我'},
+        {url:'/write',text:'写文章'},
       ],
       curIndex:0,
     };
   },
-  watch: {},
+  watch: {  
+  },
   computed: {
   },
   methods: {
@@ -66,23 +69,24 @@ export default {
     },
     toLogin(){
       this.$router.push('/login')
+    },
+    getCurIndex(){
+      // let path = this.$route.path;
+      let path = this.$router.history._startLocation;
+      for(let i = 0; i < this.navItem.length; i++){
+        if(path === this.navItem[i].url){
+          this.curIndex = i;
+        }
+      }
     }
   },
   beforeCreate() {},
   created() {
-    console.log(this.$route);
-    console.log(this.$router);
-    let path = this.$route.path;
-    for(let i = 0; i < this.navItem.length; i++){
-      if(path === this.navItem[i].url){
-        this.curIndex = i;
-        console.log('当前索引'+this.curIndex);
-      }
-    }
+    this.getCurIndex();
   },
-  mounted() {
-    
-  }
+  mounted() { 
+  },
+
 };
 </script>
 

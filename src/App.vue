@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="clearfix">
+    <transition>
+      <router-view></router-view>
+    </transition>
     <main-nav-bar></main-nav-bar>
-    <router-view/>
     <Footer/>
   </div>
 </template>

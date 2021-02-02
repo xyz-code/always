@@ -33,11 +33,9 @@ export default {
 
   },
   mounted() {
-    console.log(typeof fetchList);
     fetchList().then(res =>{
       res.data.forEach(data => {
         this.articles.push(data)
-        console.log(data);
       })
     })
   }
